@@ -1,0 +1,17 @@
+<div class="panel">
+  <div>
+	<input class="form-control" type="text" ng-model="searchtext"></input>
+	<p class="text-center"><button type="submit" class="btn btn-success" ng-click="searchBeer()">Beer Me!</button></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+	<table class="table">
+	 <thead>
+		<td>store</td><td>beer</td><td>price</td>
+	 </thead>
+	 <tbody ng-repeat="beer in data.beerData">
+		<tr><td>{{beer.store}}</td><td>{{beer.beer}}</td><td>{{beer.price}}</td></tr>
+	 </tbody>
+	</table>
+</div>
