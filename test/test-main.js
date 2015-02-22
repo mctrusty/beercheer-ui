@@ -22,7 +22,21 @@ requirejs.config({
     'angular-sanitize': '../../bower_components/angular-sanitize/angular-sanitize',
     'angular-scenario': '../../bower_components/angular-scenario/angular-scenario',
     'angular-touch': '../../bower_components/angular-touch/angular-touch',
-    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap'
+    bootstrap: '../../bower_components/bootstrap/dist/js/bootstrap',
+    'angular-google-maps': '../../bower_components/angular-google-maps/dist/angular-google-maps',
+    async: '../../bower_components/requirejs-plugins/src/async',
+    googlemaps: '../../bower_components/googlemaps-amd/src/googlemaps',
+    depend: '../../bower_components/requirejs-plugins/src/depend',
+    font: '../../bower_components/requirejs-plugins/src/font',
+    goog: '../../bower_components/requirejs-plugins/src/goog',
+    image: '../../bower_components/requirejs-plugins/src/image',
+    json: '../../bower_components/requirejs-plugins/src/json',
+    mdown: '../../bower_components/requirejs-plugins/src/mdown',
+    noext: '../../bower_components/requirejs-plugins/src/noext',
+    propertyParser: '../../bower_components/requirejs-plugins/src/propertyParser',
+    'Markdown.Converter': '../../bower_components/requirejs-plugins/lib/Markdown.Converter',
+    text: '../../bower_components/requirejs-plugins/lib/text',
+    'googlemaps-amd': '../../bower_components/googlemaps-amd/src/googlemaps'
   },
 
     shim: {

@@ -1,4 +1,4 @@
-define(['angular'], function (angular) {
+define(['angular', 'googlemaps!'], function (angular, googlemaps) {
   'use strict';
 
   /**

@@ -1,5 +1,5 @@
 /*jshint unused: vars */
-define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService)/*invoke*/ {
+define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch', 'controllers/input']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService, InputCtrl)/*invoke*/ {
   'use strict';
 
   /**
@@ -14,6 +14,7 @@ define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch
     .module('beercheerApp', ['beercheerApp.controllers.MainCtrl',
 'beercheerApp.controllers.AboutCtrl',
 'beercheerApp.services.BeerSearch',
+'beercheerApp.controllers.InputCtrl',
 /*angJSDeps*/
     'ngCookies',
     'ngResource',
@@ -32,6 +33,10 @@ define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch
           templateUrl: 'views/about.html',
           controller: 'AboutCtrl'
         })
+		.when('/input', {
+			templateUrl: 'views/input.html',
+			controller: 'InputCtrl'
+		})
         .otherwise({
           redirectTo: '/'
         });
