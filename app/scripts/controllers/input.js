@@ -8,7 +8,7 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
    * # InputCtrl
    * Controller of the beercheerApp
    */
-  angular.module('beercheerApp.controllers.InputCtrl', [])
+  angular.module('beercheerApp.controllers.InputCtrl', ['ui.bootstrap'])
     .controller('InputCtrl', function ($scope) {
 	  
 	var input = document.getElementById('storeInput');
@@ -18,6 +18,8 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
 	};
 
 	var ac = new google.maps.places.Autocomplete(input, options);
+	
+	$scope.isCollapsed = false;
 	
 	$scope.beer = {};
       $scope.awesomeThings = [

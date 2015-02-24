@@ -24,7 +24,8 @@ require.config({
     propertyParser: '../../bower_components/requirejs-plugins/src/propertyParser',
     'Markdown.Converter': '../../bower_components/requirejs-plugins/lib/Markdown.Converter',
     text: '../../bower_components/requirejs-plugins/lib/text',
-    'googlemaps-amd': '../../bower_components/googlemaps-amd/src/googlemaps'
+    'googlemaps-amd': '../../bower_components/googlemaps-amd/src/googlemaps',
+    'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls'
   },
   shim: {
     angular: {
@@ -51,6 +52,9 @@ require.config({
     'angular-google-maps': [
       'angular'
     ],
+	'angular-bootstrap': [
+	  'angular'
+	],
     'angular-mocks': {
       deps: [
         'angular'
@@ -83,8 +87,9 @@ require([
   'angular-sanitize',
   'angular-resource',
   'angular-animate',
-  'angular-touch'
-], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch) {
+  'angular-touch',
+  'angular-bootstrap'
+], function(angular, app, ngRoutes, ngCookies, ngSanitize, ngResource, ngAnimate, ngTouch, ngBootstrap) {
   'use strict';
   /* jshint ignore:start */
   var $html = angular.element(document.getElementsByTagName('html')[0]);

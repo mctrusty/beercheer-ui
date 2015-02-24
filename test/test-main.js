@@ -36,7 +36,8 @@ requirejs.config({
     propertyParser: '../../bower_components/requirejs-plugins/src/propertyParser',
     'Markdown.Converter': '../../bower_components/requirejs-plugins/lib/Markdown.Converter',
     text: '../../bower_components/requirejs-plugins/lib/text',
-    'googlemaps-amd': '../../bower_components/googlemaps-amd/src/googlemaps'
+    'googlemaps-amd': '../../bower_components/googlemaps-amd/src/googlemaps',
+    'angular-bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap-tpls'
   },
 
     shim: {

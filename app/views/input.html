@@ -1,7 +1,39 @@
 <p>Deets</p>
 <form novalidate class="simple-form">
-	<label for="storeInput">Store</label> 
-	<input id="storeInput" class="form-control" type="text" ng.model="beer.store"/><br/>
+		<div class="input-group">
+		<label for="storeInput">Store</label> 
+		<input id="storeInput" class="form-control" type="text" ng.model="beer.store"/><br/>
+		<div class="input-group-btn">
+			<a class="btn btn-default" id="incidentButton" ng-click="isCollapsed = !isCollapsed" tabindex="-1" data-original-title="Click to Show/Hide Details"><span class="glyphicon glyphicon-list-alt"></span></a>
+		</div><!-- /btn-group -->
+	</div>
+	<div id="storeDetails" collapse="!isCollapsed" class="col-md-12">
+		<input id="placeId" hidden="true">
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Place:</a>
+			<input id="place" type="text" class="form-control" data-field="beerPlace" maxlength="10">
+		</div>
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Street Number:</a>
+			<input id="street_number" type="text" class="form-control" data-field="incidentStreetNumber" maxlength="10">
+		</div>
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Street Name:</a>
+			<input id="route" type="text" class="form-control" data-field="incidentStreetName" maxlength="24">
+		</div>
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">City Name:</a>
+			<input id="locality" type="text" class="form-control" data-field="incidentCityName" maxlength="30">
+		</div>
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">State:</a>
+			<input id="administrative_area_level_1" type="text" class="form-control" data-field="incidentStateTypeCode" maxlength="4">
+		</div>
+		<div class="form-group col-md-3">
+			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Zip Code:</a>
+			<input id="postal_code" type="text" class="form-control" data-field="incidentZipNumber" maxlength="9">
+		</div>
+	</div>
 	<label for="beerInput">Beer</label>
 	<input id="beerInput" class="form-control" type="text" ng.model="beer.beer"/><br/>
 </form>
