@@ -25,6 +25,9 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
 		$scope.store = Store.build(place);
 	});
 	
+	$scope.packages = ["6er", "12er", "case"];
+	$scope.containers = ["bottles", "cans", "keg"];
+	$scope.sizes = ["12oz", "22oz", "330mL"];
 	$scope.isCollapsed = false;
 
     });

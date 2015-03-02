@@ -34,5 +34,17 @@
 		</div>
 	</div>
 	<label for="beerInput">Beer</label>
-	<input id="beerInput" class="form-control" type="text" ng.model="beer.beer"/><br/>
-</form>
+	<input id="beerInput" class="form-control" type="text" ng.model="beer.beer"/>
+	<label for="brewerInput">Brewer</label>
+	<input id="brewerInput" class="form-control" type="text" ng.model="beer.brewer"/><br/>
+	<label for="beerPrice">Price</label>
+	<input id="beerPrice" class="form-control" type="text" ng.model="beer.price"/><br/>
+	<label for="beerPkgInput">Package</label>
+	<select class="form-control" id="beerPkgInput" ng-model="beer.package" ng-options="package for package in packages"></select>
+	<label for="beerSizeInput">Container Size</label>
+	<select class="form-control" id="beerSizeInput" ng-model="beer.size" ng-options="size for size in sizes">
+	</select>
+	<label for="beerContainerTypeInput">Container Type</label>
+	<select class="form-control" id="beerContainerTypeInput" ng-model="beer.container" ng-options="container for container in containers">
+	</select>
+	</form>
