@@ -52,9 +52,9 @@ require.config({
     'angular-google-maps': [
       'angular'
     ],
-	'angular-bootstrap': [
-	  'angular'
-	],
+    'angular-bootstrap': [
+      'angular'
+    ],
     'angular-mocks': {
       deps: [
         'angular'
