@@ -3,6 +3,8 @@ var express = require('express'),
 	app = express(),
 	server = require('http').Server(app);
 	
+app.set('port', (process.env.PORT || 5000));
+
 app.use('dist', express.static(__dirname + '/dist'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/scripts',express.static(__dirname + '/dist/scripts'));
@@ -16,6 +18,6 @@ app.use('/*', function(req, res) {
 	res.sendFile(__dirname + '/dist/index.html');
 });
 
-server.listen(3000, function() {
+server.listen(app.get('port'), function() {
 	console.log('Listening on port %d', server.address().port);
 });
