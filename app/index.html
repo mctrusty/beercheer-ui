@@ -23,11 +23,12 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
+      <div class="header" ng-controller="HeaderCtrl">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#/">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/">Contact</a></li>
+          <li ng-class="{ active: isActive('/')}"><a ng-href="#/">Home</a></li>
+		  <li ng-class="{ active: isActive('/input')}"><a ng-href="#/input">Input</a></li>
+          <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+          <li ng-class="{ active: isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
         </ul>
         <h3 class="text-muted">beercheer</h3>
       </div>
@@ -35,7 +36,7 @@
       <div ng-view></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><span class="glyphicon glyphicon-glass"></span> BeerCheer</p>
       </div>
     </div>
 
