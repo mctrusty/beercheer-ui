@@ -1,5 +1,5 @@
 /*jshint unused: vars */
-define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch', 'controllers/input', 'controllers/contact', 'controllers/header', 'services/store']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService, InputCtrl, StoreFactory)/*invoke*/ {
+define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch', 'controllers/input', 'controllers/contact', 'controllers/header', 'services/store', 'services/beerinput']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService, InputCtrl, StoreFactory, BeerInputService)/*invoke*/ {
   'use strict';
 
   /**
@@ -12,19 +12,20 @@ define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch
    */
   return angular
     .module('beercheerApp', ['beercheerApp.controllers.MainCtrl',
-'beercheerApp.controllers.AboutCtrl',
-'beercheerApp.services.BeerSearch',
-'beercheerApp.controllers.InputCtrl',
-'beercheerApp.controllers.ContactCtrl',
-'beercheerApp.controllers.HeaderCtrl',
-'beercheerApp.services.Store',
-/*angJSDeps*/
-    'ngCookies',
-    'ngResource',
-    'ngSanitize',
-    'ngRoute',
-    'ngAnimate',
-    'ngTouch'
+			'beercheerApp.controllers.AboutCtrl',
+			'beercheerApp.services.BeerSearch',
+			'beercheerApp.controllers.InputCtrl',
+			'beercheerApp.controllers.ContactCtrl',
+			'beercheerApp.controllers.HeaderCtrl',
+			'beercheerApp.services.Store',
+			'beercheerApp.services.BeerInput',
+			/*angJSDeps*/
+			'ngCookies',
+			'ngResource',
+			'ngSanitize',
+			'ngRoute',
+			'ngAnimate',
+			'ngTouch'
   ])
     .config(function ($routeProvider) {
       $routeProvider
