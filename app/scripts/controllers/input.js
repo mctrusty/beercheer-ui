@@ -11,7 +11,7 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
   angular.module('beercheerApp.controllers.InputCtrl', ['ui.bootstrap', 'beercheerApp.services.Store', 'beercheerApp.services.BeerInput'])
     .controller('InputCtrl', function ($scope, Store, BeerInput) {
 	
-		$scope.beer = {};
+		$scope.beer = { google_id: '', store_name: '', price: 0.00, beer: '', brewer: '', pkg: 0, pkg_size: 12.0, container: 'bottle'};
 		$scope.store = new Store('', '', '');
 		
 		var input = document.getElementById('storeInput');

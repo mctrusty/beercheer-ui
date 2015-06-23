@@ -12,18 +12,24 @@ angular.module('beercheerApp.services.BeerInput', [])
   .service('BeerInput', function ($http, $q) {
 		var _inputData = {};
 		
-		this.setInputData = function(data) {
-			_inputData = data;
-			alert('set data');
+		function mapInput(inputBeer)
+		{
+			var output = {}
+			output.store = {googleId: inputBeer.google_id, name: inputBeer.name};
+			output.beer = {beer: inputBeer.beer, brewer: inputBeer.brewer};
+			return output;
 		}
 		
-		var baseUrl = 'http://192.168.0.27/api/beer';
+		this.setInputData = function(data) {
+			_inputData = mapInput(data);
+			alert(_inputData.beer.beer);
+		}
+		
+		var baseUrl = 'http://192.168.0.27:3000/api/beer';
 		this.callApi = function(){
 			var deferred = $q.defer();
-			$http({
-				method: 'JSONP',
-				url: baseUrl
-			}).success(function(data) {
+			$http.post({baseUrl, data})
+			.success(function(data) {
 				deferred.resolve(data);
 			}).error(function(){
 				deferred.reject('Error contacting the API');
