@@ -11,7 +11,7 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
   angular.module('beercheerApp.controllers.InputCtrl', ['ui.bootstrap', 'beercheerApp.services.Store', 'beercheerApp.services.BeerInput'])
     .controller('InputCtrl', function ($scope, Store, BeerInput) {
 	
-		$scope.beer = { google_id: '', store_name: '', price: 0.00, beer: '', brewer: '', pkg: 0, pkg_size: 12.0, container: 'bottle'};
+		$scope.beer = {price: 0.00, beer: '', brewer: '', pkg: 0, pkg_size: 12.0, container: 'bottle'};
 		$scope.store = new Store('', '', '');
 		
 		var input = document.getElementById('storeInput');
@@ -31,8 +31,14 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
 		$scope.isCollapsed = false;
 		
 		$scope.inputBeer = function(){
-			alert('sending...');
+			$scope.beer.store = $scope.store;
 			BeerInput.setInputData($scope.beer);
+			BeerInput.callApi()
+				.then(function(result){
+					alert(result)
+				}, function(data) {
+					alert(data);
+				});
 		}
 
     });

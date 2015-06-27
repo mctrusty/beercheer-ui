@@ -14,31 +14,31 @@
 		</div>
 		<div class="form-group col-md-3">
 			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Street Number:</a>
-			<input id="street_number" type="text" class="form-control" data-field="incidentStreetNumber" maxlength="10">
+			<input id="street_number" type="text" class="form-control" data-field="store.street_number" maxlength="10">
 		</div>
 		<div class="form-group col-md-3">
 			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Street Name:</a>
-			<input id="route" type="text" class="form-control" data-field="incidentStreetName" maxlength="24">
+			<input id="route" type="text" class="form-control" data-field="store.street_name" maxlength="24">
 		</div>
 		<div class="form-group col-md-3">
 			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">City Name:</a>
-			<input id="locality" type="text" class="form-control" data-field="incidentCityName" maxlength="30">
+			<input id="locality" type="text" class="form-control" data-field="store.city" maxlength="30">
 		</div>
 		<div class="form-group col-md-3">
 			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">State:</a>
-			<input id="administrative_area_level_1" type="text" class="form-control" data-field="incidentStateTypeCode" maxlength="4">
+			<input id="administrative_area_level_1" type="text" class="form-control" data-field="store.state" maxlength="4">
 		</div>
 		<div class="form-group col-md-3">
 			<a class="right ctrl" title="" data-placement="right" data-toggle="tooltip" href="#" tabindex="-1">Zip Code:</a>
-			<input id="postal_code" type="text" class="form-control" data-field="incidentZipNumber" maxlength="9">
+			<input id="postal_code" type="text" class="form-control" data-field="store.zip" maxlength="9">
 		</div>
 	</div>
 	<label for="beerInput">Beer</label>
-	<input id="beerInput" class="form-control" type="text" ng.model="beer.beer"/>
+	<input id="beerInput" class="form-control" type="text" ng-model="beer.beer"/>
 	<label for="brewerInput">Brewer</label>
-	<input id="brewerInput" class="form-control" type="text" ng.model="beer.brewer"/><br/>
+	<input id="brewerInput" class="form-control" type="text" ng-model="beer.brewer"/><br/>
 	<label for="beerPrice">Price</label>
-	<input id="beerPrice" class="form-control" type="text" ng.model="beer.price"/><br/>
+	<input id="beerPrice" class="form-control" type="text" ng-model="beer.price"/><br/>
 	<label for="beerPkgInput">Package</label>
 	<select class="form-control" id="beerPkgInput" ng-model="beer.package" ng-options="package for package in packages"></select>
 	<label for="beerSizeInput">Container Size</label>
