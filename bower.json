@@ -20,5 +20,22 @@
     "angular-mocks": "^1.3.0",
     "angular-scenario": "^1.3.0"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "homepage": "https://github.com/mctrusty/beercheer-ui",
+  "authors": [
+    "Michael J. Cox <mike.jon.cox@gmail.com>"
+  ],
+  "description": "beercheer ui",
+  "main": "main.js",
+  "keywords": [
+    "beer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
