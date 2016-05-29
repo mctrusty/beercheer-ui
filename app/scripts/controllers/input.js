@@ -8,8 +8,8 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
    * # InputCtrl
    * Controller of the beercheerApp
    */
-  angular.module('beercheerApp.controllers.InputCtrl', ['ui.bootstrap', 'beercheerApp.services.Store', 'beercheerApp.services.BeerInput'])
-    .controller('InputCtrl', function ($scope, Store, BeerInput) {
+  angular.module('beercheerApp.controllers.InputCtrl', ['ui.bootstrap', 'beercheerApp.services.Store', 'beercheerApp.services.BeerInput','beercheerApp.services.Brewers'])
+    .controller('InputCtrl', function ($scope, Store, BeerInput, Brewers) {
 	
 		$scope.beer = {price: 0.00, beer: '', brewer: '', pkg: 0, pkg_size: 12.0, container: 'bottle'};
 		$scope.store = new Store('', '', '');
@@ -29,7 +29,17 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
 		$scope.containers = ["bottles", "cans", "keg"];
 		$scope.sizes = ["12oz", "22oz", "330mL"];
 		$scope.isCollapsed = false;
+
+		var onBrewersFetched = function(data) {	
+			$scope.brewers = data;
+		}
 		
+		var onBrewersFetchedErr = function(message){
+			$scope.error = "Error fetching brewers";
+		}
+		
+		Brewers.callApi().then(onBrewersFetched, onBrewersFetchedErr);
+
 		$scope.inputBeer = function(){
 			$scope.beer.store = $scope.store;
 			BeerInput.setInputData($scope.beer);

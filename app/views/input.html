@@ -36,9 +36,13 @@
 	<label for="beerInput">Beer</label>
 	<input id="beerInput" class="form-control" type="text" ng-model="beer.beer"/>
 	<label for="brewerInput">Brewer</label>
-	<input id="brewerInput" class="form-control" type="text" ng-model="beer.brewer"/><br/>
+	<select id="brewerInput" class="form-control" type="text" ng-model="beer.brewer">
+		<option ng-repeat="brewer in brewers" value = "{{brewer.name}}">{{brewer.name}}</option>
+	</select>
+	<br/>
 	<label for="beerPrice">Price</label>
-	<input id="beerPrice" class="form-control" type="text" ng-model="beer.price"/><br/>
+	<input id="beerPrice" class="form-control" type="text" ng-model="beer.price"/>
+	<br/>
 	<label for="beerPkgInput">Package</label>
 	<select class="form-control" id="beerPkgInput" ng-model="beer.package" ng-options="package for package in packages"></select>
 	<label for="beerSizeInput">Container Size</label>

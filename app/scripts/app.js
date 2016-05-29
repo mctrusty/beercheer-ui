@@ -1,5 +1,5 @@
 /*jshint unused: vars */
-define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch', 'controllers/input', 'controllers/contact', 'controllers/header', 'services/store', 'services/beerinput']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService, InputCtrl, StoreFactory, BeerInputService)/*invoke*/ {
+define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch', 'controllers/input', 'controllers/contact', 'controllers/header', 'services/store', 'services/beerinput', 'services/brewers']/*deps*/, function (angular, MainCtrl, AboutCtrl, BeerSearchService, InputCtrl, StoreFactory, BeerInputService)/*invoke*/ {
   'use strict';
 
   /**
@@ -19,6 +19,7 @@ define(['angular', 'controllers/main', 'controllers/about', 'services/beersearch
 			'beercheerApp.controllers.HeaderCtrl',
 			'beercheerApp.services.Store',
 			'beercheerApp.services.BeerInput',
+			'beercheerApp.services.Brewers',
 			/*angJSDeps*/
 			'ngCookies',
 			'ngResource',
