@@ -54,7 +54,7 @@
   "scripts": {
     "test": "grunt test"
   },
-  "postinstall": {
+  "scripts": {
 	"postinstall" : "node_modules/.bin/bower install"
   }
 }
