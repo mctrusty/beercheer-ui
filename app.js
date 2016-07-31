@@ -5,6 +5,8 @@ var express = require('express'),
 	server = require('http').Server(app);
 	
 app.use(favicon(__dirname + '/app/favicon'));
+
+app.use(express.static(__dirname + '/public'));
 app.use('app', express.static(__dirname + '/app'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/scripts',express.static(__dirname + '/app/scripts'));
