@@ -15,7 +15,7 @@ app.use('/styles', express.static(__dirname + '/dist/styles'));
 app.use('/views', express.static(__dirname + '/dist/views'));
 app.use('/fonts', express.static(__dirname + '/dist/fonts'));
 
-app.use('/*', function(req, res) {
+app.use('/', function(req, res) {
 	console.log('Catch-all triggered');
 	console.log(req.baseUrl);
 	res.sendFile(__dirname + '/dist/index.html');
