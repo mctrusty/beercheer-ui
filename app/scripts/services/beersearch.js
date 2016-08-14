@@ -10,7 +10,7 @@ define(['angular'], function (angular) {
    */
   angular.module('beercheerApp.services.BeerSearch', [])
 	.service('BeerSearch', function ($http, $q) {
-		var baseUrl = 'https://s-beercheer.herokuapp.com/api/brewer?q=';
+		var baseUrl = 'https://beercheer-api.herokuapp.com/api/brewer?q=';
 		var _searchTerm = '';
 		var _searchUrl = '';
 		
