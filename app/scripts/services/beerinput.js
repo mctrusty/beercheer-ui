@@ -27,7 +27,7 @@ angular.module('beercheerApp.services.BeerInput', [])
 			_inputData = mapInput(data);
 		}
 		
-		var baseUrl = 'http://192.168.0.27:3000/api/beer';
+		var baseUrl = 'http://beercheer-api.herokuapp.com/api/beer';
 		this.callApi = function(){
 			var deferred = $q.defer();
 			$http.post(baseUrl, _inputData)
