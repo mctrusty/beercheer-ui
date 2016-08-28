@@ -36,10 +36,11 @@
 	<label for="beerInput">Beer</label>
 	<input id="beerInput" class="form-control" type="text" ng-model="beer.beer"/>
 	<label for="brewerInput">Brewer</label>
-	<select id="brewerInput" class="form-control" type="text" ng-model="beer.brewer">
-		<option ng-repeat="brewer in brewers" value = "{{brewer.name}}">{{brewer.name}}</option>
-	</select>
-	<br/>
+	<input id="brewerInput" ""type="text" ng-model="beer.brewer" placeholder="brewer" uib-typeahead="brewer.name for brewer in brewers | filter: $viewValue | limitTo: 8" typeahead-loading="loadingBrewers" typeahead-no-results="noResults" class="form-control">
+	<i ng-show="loadingBrewers" class="glyphicon glyphicon-refresh"></i>
+	<div ng-show="noResults">
+		<i class="glyphicon glyphicon-remove"></i>No Results Found
+	</div>
 	<label for="beerPrice">Price</label>
 	<input id="beerPrice" class="form-control" type="text" ng-model="beer.price"/>
 	<br/>

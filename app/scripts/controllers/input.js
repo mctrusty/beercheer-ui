@@ -29,6 +29,7 @@ define(['angular', 'googlemaps!'], function (angular, googlemaps) {
 		$scope.containers = ["bottles", "cans", "keg"];
 		$scope.sizes = ["12oz", "22oz", "330mL"];
 		$scope.isCollapsed = false;
+		$scope.staticBrewers = ['Avery', 'New Belgium', 'Great Divide', 'Alaskan', 'Odd13', 'Epic', 'Cannonball'];
 
 		var onBrewersFetched = function(data) {	
 			$scope.brewers = data;
